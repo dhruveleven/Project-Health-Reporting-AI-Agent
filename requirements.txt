@@ -1,0 +1,6 @@
+pandas
+openpyxl
+google-genai
+python-pptx
+scikit-learn
+python-dotenv

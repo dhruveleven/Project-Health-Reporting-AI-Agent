@@ -1,0 +1,104 @@
+{
+  "project_name": "Zycus - UniSan S2P Implementation",
+  "source_file": "Project_Plan_B.xlsx",
+  "as_of_date": "2026-07-02T00:00:00",
+  "as_of_is_simulated": false,
+  "official_rag": "Amber",
+  "scorer_detail": {
+    "rag": "Amber",
+    "composite_score": 0.556,
+    "signal_bands": {
+      "schedule_slippage": 0,
+      "variance_health": 0,
+      "overdue_task_ratio": 1,
+      "milestone_health": 1,
+      "blocker_density": 1,
+      "schedule_health_signal": 0,
+      "comment_risk_signal": null
+    },
+    "overridden": true,
+    "override_reason": "Overdue critical-path tasks present",
+    "weight_coverage": 0.9,
+    "confidence_score": 0.799,
+    "data_quality_score": 83,
+    "notes": "Scored on 90% of intended signal weight. Missing signals renormalized."
+  },
+  "features": {
+    "schedule_slippage": {
+      "value": 0.025,
+      "confidence": "high",
+      "notes": "Expected 46% complete vs actual 44%"
+    },
+    "milestone_health": {
+      "value": 0.02,
+      "confidence": "medium",
+      "notes": "1/50 critical tasks overdue"
+    },
+    "blocker_density": {
+      "value": 0.203,
+      "confidence": "high",
+      "notes": "32/234 active tasks have no float"
+    },
+    "variance_health": {
+      "value": 0,
+      "confidence": "high",
+      "notes": "Average positive variance 0.00 days"
+    },
+    "overdue_task_ratio": {
+      "value": 0.107,
+      "confidence": "high",
+      "notes": "25/234 active tasks overdue"
+    },
+    "schedule_health_signal": {
+      "value": 0.243,
+      "confidence": "high",
+      "notes": "Average schedule health score 0.24"
+    },
+    "comment_risk_signal": {
+      "value": null,
+      "confidence": "low",
+      "notes": "No comments available"
+    },
+    "budget_burn": {
+      "value": null,
+      "confidence": "unavailable",
+      "notes": "No budget data supplied"
+    },
+    "data_quality_score": {
+      "value": 83,
+      "confidence": "high",
+      "notes": "Data quality score 83/100"
+    },
+    "existing_project_signals": {
+      "summary_schedule_health": "Red",
+      "summary_at_risk": "High",
+      "pct_complete": 0.44
+    },
+    "confidence_score": {
+      "value": 0.799,
+      "confidence": "high",
+      "notes": "Coverage=0.78, quality=0.83"
+    }
+  },
+  "insights": {
+    "positive_drivers": [],
+    "negative_drivers": [
+      "Critical-path activities are overdue"
+    ],
+    "confidence_score": 0.799,
+    "data_quality_score": 83,
+    "rag": "Amber"
+  },
+  "narration": {
+    "reasoning": "[LLM narration unavailable: 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 20, model: gemini-2.5-flash\\nPlease retry in 21.692845228s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://ai.google.dev/gemini-api/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'location': 'global', 'model': 'gemini-2.5-flash'}, 'quotaValue': '20'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '21s'}]}}] See computed metrics above for status.",
+    "flagged_for_review": false,
+    "flag_reason": null,
+    "data_gaps": [
+      "LLM narration call failed -- see error above"
+    ],
+    "top_risks": []
+  },
+  "data_quality_notes": [
+    "No budget/cost column present in source data"
+  ]
+}
